@@ -138,105 +138,49 @@
 <header class="fusion-header-wrapper" style="">
   <div class="wrapper">
 
-    <div class="fusion-header-v1 fusion-logo-left fusion-sticky-menu- fusion-sticky-logo- fusion-mobile-logo- fusion-mobile-menu-design-modern">
-      <div class="fusion-header-sticky-height" style="height: 276px; display: none; overflow: visible;">
-      </div>
+    <div class="fusion-header-v1 fusion-logo-left fusion-mobile-logo- fusion-mobile-menu-design-modern">
+      
       <div class="fusion-header" style="height: 276px; top: 0px; overflow: visible;">
         <div class="fusion-row" style="padding-top: 0px; padding-bottom: 0px;">
           <?php get_template_part( 'advert/home-970x90'); ?>
+
+
+	  <?php
+	  get_template_part( 'framework/templates/header' );
+	  avada_header_template( 'Below' );
+
+	  ?>
+
+	  <?php if(is_page_template('contact.php') && $smof_data['recaptcha_public'] && $smof_data['recaptcha_private']): ?>
+	    <script type="text/javascript">
+	      var RecaptchaOptions = {
+		theme : '<?php echo $smof_data['recaptcha_color_scheme']; ?>'
+	      };
+	    </script>
+	  <?php endif; ?>
+	  <?php if(is_page_template('contact.php') && $smof_data['gmap_address'] && !$smof_data['status_gmap']): ?>
+	  <?php endif; ?>
+	</div>
+<div class="wrapper logowrapper">
           <div class="col1">
             <div class="xlogo" data-margin-right="<?php echo $smof_data['margin_logo_right']; ?>" data-margin-left="<?php echo $smof_data['margin_logo_left']; ?>" data-margin-top="<?php echo $smof_data['margin_logo_top']; ?>" data-margin-bottom="<?php echo $smof_data['margin_logo_bottom']; ?>" style="margin-right:<?php echo $smof_data['margin_logo_right']; ?>;margin-top:<?php echo $smof_data['margin_logo_top']; ?>;margin-left:<?php echo $smof_data['margin_logo_left']; ?>;margin-bottom:<?php echo $smof_data['margin_logo_bottom']; ?>;">
               <a href="<?php echo home_url(); ?>">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.jpg" alt="<?php bloginfo('name'); ?>" class="normal_logo" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt="<?php bloginfo('name'); ?>" class="normal_logo" />
 
               </a>
             </div>
           </div>
           <div class="col2">
-	<?php
-	if(is_page('header-2')) {
-		$smof_data['header_right_content'] = 'Social Links';
-		if($smof_data['scheme_type'] == 'Dark') {
-			$smof_data['header_top_bg_color'] = '#29292a';
-			$smof_data['snav_color'] = '#ffffff';
-			$smof_data['header_top_first_border_color'] = '#3e3e3e';
-		} else {
-			$smof_data['header_top_bg_color'] = '#ffffff';
-			$smof_data['snav_color'] = '#747474';
-			$smof_data['header_top_first_border_color'] = '#efefef';
-		}
-	} elseif(is_page('header-3')) {
-		$smof_data['header_right_content'] = 'Social Links';
-		if($smof_data['scheme_type'] == 'Dark') {
-			$smof_data['snav_color'] = '#747474';
-			$smof_data['snav_color'] = '#bebdbd';
-		} else {
-			$smof_data['snav_color'] = '#ffffff';
-			$smof_data['header_social_links_icon_color'] = '#ffffff';
-		}
-	} elseif(is_page('header-4')) {
-		$smof_data['header_left_content'] = 'Social Links';
-		if($smof_data['scheme_type'] == 'Dark') {
-			$smof_data['snav_color'] = '#747474';
-			$smof_data['snav_color'] = '#bebdbd';
-		} else {
-			$smof_data['snav_color'] = '#ffffff';
-			$smof_data['header_social_links_icon_color'] = '#ffffff';
-		}
-		$smof_data['header_right_content'] = 'Navigation';
-	} elseif(is_page('header-5')) {
-		$smof_data['header_right_content'] = 'Social Links';
-		if($smof_data['scheme_type'] == 'Dark') {
-			$smof_data['snav_color'] = '#747474';
-			$smof_data['snav_color'] = '#bebdbd';
-		} else {
-			$smof_data['snav_color'] = '#ffffff';
-			$smof_data['header_social_links_icon_color'] = '#ffffff';
-		}		
-	}
-	?>
+
 
             <div class="gcs">
-              <?php get_template_part( 'widgets/social_links'); ?>
+	      <?php get_template_part( 'gcs'); ?>
             </div>
-            <?php get_template_part( 'gcs'); ?>
           </div>
         </div>
       </div>
     </div>
-</header>
-
-<header id="header-sticky" class="sticky-header">
-  <div class="sticky-shadow">
-    <div class="avada-row">
-      <div class="logo">
-        <a href="<?php echo home_url(); ?>">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.jpg" alt="<?php bloginfo('name'); ?>" class="normal_logo" />
-
-        </a>
-      </div>
-
-      <nav id="sticky-nav" class="nav-holder">
-        <ul class="navigation menu fusion-navbar-nav">
-      </nav>
-
     </div>
-  </div>
 </header>
-<div class="wrapper">
 
-  <?php
-  get_template_part( 'framework/templates/header' );
-  avada_header_template( 'Below' );
 
-  ?>
-
-  <?php if(is_page_template('contact.php') && $smof_data['recaptcha_public'] && $smof_data['recaptcha_private']): ?>
-    <script type="text/javascript">
-      var RecaptchaOptions = {
-        theme : '<?php echo $smof_data['recaptcha_color_scheme']; ?>'
-      };
-    </script>
-  <?php endif; ?>
-  <?php if(is_page_template('contact.php') && $smof_data['gmap_address'] && !$smof_data['status_gmap']): ?>
-  <?php endif; ?>
