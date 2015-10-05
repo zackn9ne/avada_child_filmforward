@@ -203,10 +203,18 @@ nav#nav { font: 20px/16px 'MuseoSlab500Regular', arial, helvetica, sans-serif; m
 
   .col2 {
     float: right;
-    margin-left: -300px;
+    margin-left: -350px;
     width: 300px; } }
 /*this theme*/
 /*max width*/
+@media screen and (max-width: 884px) {
+	.col2 {
+		float: left;
+		margin: 0;
+	}
+
+}
+
 @media screen and (max-width: 679px) {
   .col1 {
     clear: left;
@@ -217,6 +225,17 @@ nav#nav { font: 20px/16px 'MuseoSlab500Regular', arial, helvetica, sans-serif; m
 #header-sticky .avada-row, #header .avada-row, #main .avada-row, .footer-area .avada-row, #slidingbar-area .avada-row, #footer .avada-row, .page-title, .header-social .avada-row, #small-nav .avada-row, .tfs-slider .slide-content-container .slide-content {
   max-width: 1000px !important; }
 
+.post-content blockquote {
+	border-left: 4px solid #1c75cf;
+	margin: 13px 0;
+}
+.post-content blockquote > p {
+	margin-bottom: 0 !important;
+}
+.section-title.advert span {
+	display: inline-block; 
+	width: 100%;
+}
 /*search box*/
 .main-nav-search-form {
   display: inline-block !important; }

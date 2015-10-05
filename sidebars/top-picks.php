@@ -6,7 +6,7 @@
 		//loop4
 			$args = [
 			'category_name' => 'star-reviews',
-			'showposts' => '3',
+			'showposts' => '5',
 			'offset' => '3'
 			];
 			$new_query = new WP_Query($args);

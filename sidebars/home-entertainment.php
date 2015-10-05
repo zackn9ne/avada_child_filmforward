@@ -5,7 +5,7 @@
 //loop4
 $args = [
 'category_name' => 'home-entertainment',
-	'showposts' => '3',
+	'showposts' => '5',
 	'offset' => '3'
 	];
 	$new_query = new WP_Query($args);

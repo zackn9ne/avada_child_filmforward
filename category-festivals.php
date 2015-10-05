@@ -25,6 +25,7 @@
 
 	<aside id="sidebar">
 		<div class="col2">
+			<?php dynamic_sidebar( 'Blog Sidebar' ); ?> 
 			<div class="section-title advert">
 				<span>Advertisement</span>
 			</div>
@@ -60,6 +61,7 @@
 
 	<aside id="sidebar">
 	<div class="col2">
+		<?php dynamic_sidebar( 'Blog Sidebar' ); ?> 
 		<?php get_template_part('sidebars/home-entertainment'); ?>
 		<div class="section-title advert">
 			<span>Advertisement</span>

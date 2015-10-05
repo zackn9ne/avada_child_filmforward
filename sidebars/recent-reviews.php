@@ -7,7 +7,7 @@
 		//loop3
 			$args = [
 			'category_name' => '',
-			'showposts' => '3'
+			'showposts' => '5'
 			];
 			$new_query = new WP_Query($args);
 		?>

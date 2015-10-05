@@ -25,6 +25,7 @@
 
 	<aside id="sidebar">
 		<div class="col2">
+			<?php dynamic_sidebar( 'Blog Sidebar' ); ?> 
 			<div class="section-title advert">
 				<span>Advertisement</span>
 			</div>

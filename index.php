@@ -14,16 +14,18 @@
 			the_post_thumbnail(); //featured image
 		} ?>
 
-		<h1 class="featured-excerpt"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1> <!-- overlay on image box -->
+			<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+			<?php the_excerpt(); ?> 
 		</div>
 	</div>
 	<?php endwhile; ?>
 
 	<aside id="sidebar">
 		<div class="col2">
-		<div class="section-title advert">
-		<span>Advertisement</span>
-		</div>
+				<?php dynamic_sidebar( 'Blog Sidebar' ); ?> 
+			<div class="section-title advert">
+				<span>Advertisement</span>
+			</div>
 		<?php get_template_part('advert/home-350x250'); ?>
 		</div>
 
@@ -48,15 +50,16 @@
 			<?php if (have_posts()) : while (have_posts()) : the_post();
 			if ($post->ID == $do_not_duplicate) continue; ?>
 			<div class="post">
+			<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 			<div class="image-container">
 			<?php
 			if (has_post_thumbnail()) { // check if the post has a Post Thumbnail assigned to it.
-				the_post_thumbnail(array(300, 300));  // Other resolutions
+//				the_post_thumbnail(array(300, 300));  // Other resolutions
+				the_post_thumbnail( 'blog-medium' ); 
 			} ?>
 
 			</div>
 			<div class="promo-container">
-			<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 			<?php the_excerpt(); ?>
 			</div>
 
@@ -66,7 +69,6 @@
 
 		<aside id="sidebar">
 			<div class="col2">
-				 <?php dynamic_sidebar( 'Blog Sidebar' ); ?> 
 				<?php get_template_part('sidebars/home-entertainment'); ?>
 				<div class="section-title advert">
 					<span>Advertisement</span>
