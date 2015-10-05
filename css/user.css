@@ -2,7 +2,10 @@
 /*fonts*/
 .clearfix {
   clear: both; }
-
+.footer-area {
+    border-top: none;
+    margin-top: 1em;
+}
 header {
   background: #ffffff;
   color: #ffffff;
