@@ -18,6 +18,7 @@
 
       <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
       <?php the_excerpt(); ?> 
+    </div>
 
 
       <?php endwhile; ?>
@@ -66,7 +67,6 @@
 
 
 
-    </div>
     <aside id="sidebar" class="col2">
 
       <?php dynamic_sidebar( 'Blog Sidebar' ); ?> 

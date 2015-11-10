@@ -26,7 +26,7 @@
       <!-- not home page nulled area -->
       <div class="rest-of-posts">
 	<div class="section-title">
-          <span>Most Recent Reviews</span>
+       <span><?php single_cat_title('Currently browsing '); ?></span>
 	</div>
 
 	<?php
