@@ -44,6 +44,7 @@
 	      if ($post->ID == $do_not_duplicate) continue; ?>
 	<div class="post">
           <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+        <h3 class="byline"><?php echo __('By', 'Avada'); ?> <?php the_author_posts_link(); ?> <?php the_date(); ?></h3>			
 	  <div class="image-container">
 	    <?php
                if (has_post_thumbnail()) { // check if the post has a Post Thumbnail assigned to it.
