@@ -56,6 +56,9 @@
 				</div>
 				<?php if( ! post_password_required($post->ID) ): ?>
 
+
+
+        <!--- old code -->
 				<?php if( ( $smof_data['related_posts'] && get_post_meta($post->ID, 'pyre_related_posts', true ) != 'no' ) ||
 					  ( ! $smof_data['related_posts'] && get_post_meta($post->ID, 'pyre_related_posts', true) == 'yes' ) ): ?>
 			<?php $related = fusion_get_related_posts($post->ID, $smof_data['number_related_posts']); ?>
@@ -69,11 +72,8 @@
 							<?php if(has_post_thumbnail()): ?>
 							<li>
 								<div class="image" aria-haspopup="true">
-									<?php if($smof_data['image_rollover']): ?>
 									<?php the_post_thumbnail('related-img'); ?>
-									<?php else: ?>
 									<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('related-img'); ?></a>
-									<?php endif; ?>
 									<?php
 									if(get_post_meta($post->ID, 'pyre_image_rollover_icons', true) == 'link') {
 										$link_icon_css = 'display:inline-block;';
@@ -155,12 +155,10 @@
 			<div class="col2">
 				<?php dynamic_sidebar( 'Blog Sidebar' ); ?> 
 				<div class="section-title advert">
-					<span>Advertisement</span>
 					<?php get_template_part('advert/home-350x250'); ?>
 				</div>
 				<?php get_template_part('sidebars/home-entertainment'); ?>
 				<div class="section-title advert">
-					<span>Advertisement</span>
 					<?php get_template_part('advert/home-350x250'); ?>
 				</div>
 				<?php get_template_part('sidebars/top-picks'); ?>

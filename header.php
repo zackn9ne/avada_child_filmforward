@@ -60,6 +60,11 @@
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $smof_data['ipad_icon_retina']; ?>">
   <?php endif; ?>
 
+<!-- Headlines -->
+<link href='https://fonts.googleapis.com/css?family=Prata' rel='stylesheet' type='text/css'>
+<!-- Body Copy -->
+<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+
   <?php wp_head(); ?>
 
   <?php
@@ -139,7 +144,11 @@
   <div class="wrapper">
 
     <div class="fusion-header-v1 fusion-logo-left fusion-mobile-logo- fusion-mobile-menu-design-modern">
-      
+      <a href="<?php echo home_url(); ?>">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/fflogo.jpg" alt="<?php bloginfo('name'); ?>" class="normal_logo" />
+
+              </a>
+       <h1 class="branding">Film-Forward</h1>
       <div class="fusion-header" style="height: 276px; top: 0px; overflow: visible;">
         <div class="fusion-row" style="padding-top: 0px; padding-bottom: 0px;">
           <?php get_template_part( 'advert/home-970x90'); ?>
@@ -163,12 +172,7 @@
 	</div>
 <div class="wrapper logowrapper">
           <div class="col1">
-            <div class="xlogo" data-margin-right="<?php echo $smof_data['margin_logo_right']; ?>" data-margin-left="<?php echo $smof_data['margin_logo_left']; ?>" data-margin-top="<?php echo $smof_data['margin_logo_top']; ?>" data-margin-bottom="<?php echo $smof_data['margin_logo_bottom']; ?>" style="margin-right:<?php echo $smof_data['margin_logo_right']; ?>;margin-top:<?php echo $smof_data['margin_logo_top']; ?>;margin-left:<?php echo $smof_data['margin_logo_left']; ?>;margin-bottom:<?php echo $smof_data['margin_logo_bottom']; ?>;">
-              <a href="<?php echo home_url(); ?>">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt="<?php bloginfo('name'); ?>" class="normal_logo" />
-
-              </a>
-            </div>
+            
           </div>
           <div class="col2">
 

@@ -26,7 +26,7 @@
       <!-- not home page nulled area -->
       <div class="rest-of-posts">
 	<div class="section-title">
-       <span><?php single_cat_title('Currently browsing '); ?></span>
+       <h1><?php single_cat_title(''); ?></h1>
 	</div>
 
 	<?php
@@ -72,7 +72,6 @@
 
       <?php dynamic_sidebar( 'Blog Sidebar' ); ?> 
       <div class="section-title advert">
-	<span>Advertisement</span>
       </div>
       <?php get_template_part('advert/home-350x250'); ?>
 
@@ -80,7 +79,6 @@
 
       <?php get_template_part('sidebars/home-entertainment'); ?>
       <div class="section-title advert">
-	<span>Advertisement</span>
 	<?php get_template_part('advert/home-350x250'); ?>
       </div>
       <?php get_template_part('sidebars/top-picks'); ?>

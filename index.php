@@ -17,6 +17,8 @@
       } 
       ?>
       <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+      <h3 class="byline"><?php echo __('By', 'Avada'); ?> <?php the_author_posts_link(); ?> <?php the_date(); ?></h3>			
+
       <?php the_excerpt(); ?>
       <?php endwhile; ?>
 
@@ -85,13 +87,9 @@
 
   <aside id="sidebar" class="col2">
     <?php dynamic_sidebar( 'Blog Sidebar' ); ?> 
-    <div class="section-title advert">
-      <span>Advertisement</span>
-    </div>
     <?php get_template_part('advert/home-350x250'); ?>
     <?php get_template_part('sidebars/home-entertainment'); ?>
     <div class="section-title advert">
-      <span>Advertisement</span>
       <?php get_template_part('advert/home-350x250'); ?>
     </div>
     <?php get_template_part('sidebars/top-picks'); ?>

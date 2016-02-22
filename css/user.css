@@ -1,5 +1,22 @@
 /*colors*/
 /*fonts*/
+h1, h1 a, h2, h2 a { 
+display: block;
+line-height: 1.3; 
+font-family: 'Prata', serif; 
+color: rgb(63, 69, 73); 
+margin: 10px 0;
+}
+h1.branding { 
+font-size: 52px;
+font-weight: 500;
+text-transform: none;text-align: left;display: inline-block;top: 1em;position: relative;}
+
+p { 
+font-family: Merriweather, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+line-height: 1.8;
+}
+.meta-info .comments { display: none; }
 .clearfix {
   clear: both; }
 .footer-area {
@@ -7,7 +24,6 @@
     margin-top: 1em;
 }
 header {
-  background: #ffffff;
   color: #ffffff;
   font-size: 14px;
   font-weight: bold;
@@ -21,10 +37,13 @@ header {
     margin-top: 31px; }
 
 header.fusion-header-wrapper div.wrapper { padding-bottom: 0 }
+.fusion-header-v1 { text-align: center; }
 
 .wrapper { padding-top: 0 !important; padding-bottom: 0 !important; }
 
-.normal_logo { margin-left: -11px; }
+.normal_logo { margin: 0 0 1em 0; max-height: 100px;  }
+div.fusion-logo-left a {display: inline-block;text-align: left;}
+
 
 .gcs { margin: 2.3em 0 0 0; }
 .cse .gsc-control-cse, .gsc-control-cse { padding: 0; }
@@ -36,20 +55,17 @@ div.featured-post {
 .fusion-sharing-box.share-box, .meta-info { margin-bottom: 1em !important; margin-top: 1em !important; }
 .wrapper { padding-top: 0; margin-top: 0; margin-bottom: 0 }
 
-h1.featured-excerpt {
-position: absolute;
-bottom: 0;
-width: 94%;
-margin: 0;
-padding: 3%;
-background: rgba(0, 0, 0, 0.5);
-color: #f1f1f1;
-}
 
 .image-container {
   float: left;
   margin: 0 2em 0 0; }
 
+.rest-of-posts > .section-title {
+  padding-left: 0 !important;
+}
+.rest-of-posts > .section-title > h1 {
+  margin-top: 0;
+}
 .section-title {
   background: #1d75cf;
   color: #ffffff;
@@ -85,13 +101,12 @@ color: white;
 }
 
 body {
-  background-color: #ffffff;
-  /* nick from variety */
-  font-family:  Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Merriweather', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
   font-size: 15px;
-  line-height: 1.5em;
-  color: rgb(100, 100, 100);
+  line-height: 1.428571429;
+  color: #333333;
 }
+
 
 /* blue branding */
 a:hover, li.current-menu-item a { color: #1d75cf; }
@@ -131,9 +146,12 @@ a:hover, li.current-menu-item a { color: #1d75cf; }
     margin-bottom: 1.5em;
     padding-bottom: 1.5em;
   }
+  .featured-post h3.byline {
+      margin: 3em 0 0 0;
+  }
   .col1 .section-title {
-    background: #1d75cf;
-    color: #ffffff;
+    background: white;
+    color: black;
     display: block;
     width: 100%; }
   .col1 .post p {
@@ -143,10 +161,8 @@ a:hover, li.current-menu-item a { color: #1d75cf; }
   }
 
   h1 {
-      font-family: pt-serif, Georgia, serif;
-      line-height: 1.2em;
       margin: 0;
-      font-size: 32px;
+      font-size: 38px;
   }
 
 
@@ -154,21 +170,7 @@ img {
   height: auto;
   max-width: 100%; }
 
-h1, h1 , h1.entry-title{
-  color: black;
-  letter-spacing: -1px;
-  font-weight: 700;
-  font-family: pt-serif, Georgia, serif;
-  margin-top: 1em;
-}
 
-h2 {
-  letter-spacing: -1px;
-  line-height: 1.2em;
-  text-rendering: optimizelegibility;
-  font-weight: 700;
-  font-family: pt-serif, Georgia, serif
-}
 h3.byline {
   font-weight: 200;
   color: #999;
@@ -186,15 +188,24 @@ h3.byline a {
   width: initial; }
 
 .rest-of-posts {
-  border-top: 1px solid #666;
   padding-top: 1em; }
 
 .fusion-header { height: initial !important; }
 .xlogo { margin: 0 !important; }
 
 #nav ul li a { height: 20px; line-height: 20px; }
+#nav ul li > a,
+#sticky-nav ul li > a,
+.navigation li.current-menu-ancestor > a {
+      border-top:none !important; 
+}
 
-nav#nav { font: 20px/16px 'MuseoSlab500Regular', arial, helvetica, sans-serif; margin: .5em 0 0 0; }
+nav#nav { 
+font-family: 'Prata', serif; 
+margin: .5em 0 0 0; 
+}
+
+.pagination a.inactive, .page-links a, .woocommerce-pagination .page-numbers { border: none; }
 
 /* ul.navigation li { height: 20px; } */
 .single-navigation { margin-bottom: 30px; }
@@ -279,4 +290,5 @@ footer ul li a { color: white; }
 footer div { font-size: 10px; }
 footer div.copyright { display: block; }
 footer div.copyright a { color: #8c8989; }
+
 
