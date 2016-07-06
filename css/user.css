@@ -133,6 +133,11 @@ a:hover, li.current-menu-item a { color: #1d75cf; }
 display: inline-block;
 }
 
+/* overwrites some avada auto-width junk */
+.post-content div {
+	width: 100% !important;
+}
+
 .post-content img {
     margin: 0;
 }
@@ -242,7 +247,7 @@ padding: 0 0 0 35px;
   .col1 {
     max-width: 640px;
     float: left;
-    margin-right: 345px; }
+}
 
   .col2 {
     float: right;
@@ -250,7 +255,7 @@ padding: 0 0 0 35px;
     width: 300px; } }
 /*this theme*/
 /*max width*/
-@media screen and (max-width: 884px) {
+@media screen and (max-width: 990px) {
   .col2 {
     float: left;
     margin: 0;
@@ -261,7 +266,7 @@ padding: 0 0 0 35px;
 @media screen and (max-width: 991px) {
 .promo-container {
 float: left !important;
-width: 55% !important;
+width: 100% !important;
 }
 .image-container {
 margin-bottom: 0;
@@ -271,10 +276,17 @@ margin-bottom: 0;
 @media screen and (max-width: 679px) {
   .col1 {
     clear: left;
+    max-width: 100% !important;
 }
   .col2 {
     clear: left;
      } }
+
+@media screen and (max-width: 475px) {
+h1.branding {
+	top: inherit;
+}
+}
 #header-sticky .avada-row, #header .avada-row, #main .avada-row, .footer-area .avada-row, #slidingbar-area .avada-row, #footer .avada-row, .page-title, .header-social .avada-row, #small-nav .avada-row, .tfs-slider .slide-content-container .slide-content {
   max-width: 1000px !important; }
 
