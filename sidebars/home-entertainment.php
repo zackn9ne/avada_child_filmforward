@@ -1,17 +1,22 @@
 
 <div class="section-title">
-			<a href="/category/home-entertainment"><span>Home Entertainment</span></a>
-		</div><?php
+			<a href="/category/home-entertainment"><span>DVD/Streaming/On Demand</span></a>
+		</div>
+
+      <?php  wp_reset_query(); ?>
+<?php
 //loop4
-$args = [
-'category_name' => 'home-entertainment',
-	'showposts' => '5',
-	'offset' => '3'
-	];
-	$new_query = new WP_Query($args);
+
+$args_ondemand = array( 
+'cat' => 13, 
+	'showposts' => 5,
+	'offset' => 0
+	);
+query_posts($args_ondemand);
+	while ($wp_query->have_posts()) : $wp_query->the_post();
+
 	?>
 
-	<?php while ($new_query->have_posts()) : $new_query->the_post(); ?>
 	<?php
 	if (has_post_thumbnail()) { // check if the post has a Post Thumbnail assigned to it.
 		the_post_thumbnail(array(210, 156));  // Other resolutions

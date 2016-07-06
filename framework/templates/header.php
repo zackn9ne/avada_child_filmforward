@@ -19,7 +19,7 @@ function avada_header_template( $slider_position = 'Below' ) {
 		$smof_data['header_position'] == 'Top'
 	) {
 ?>
-			<div class="header-wrapper<?php if($smof_data['header_shadow']): ?> header-shadow<?php endif; ?>">
+			<div class="wrapper header-wrapper<?php if($smof_data['header_shadow']): ?> header-shadow<?php endif; ?>">
 				<?php
 				if($smof_data['header_layout']) {
 					if(is_page('header-2')) {

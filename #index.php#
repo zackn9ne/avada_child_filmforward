@@ -86,24 +86,13 @@
 
 
   <aside id="sidebar" class="col2">
+    <?php dynamic_sidebar( 'Blog Sidebar' ); ?> 
+    <?//php get_template_part('advert/home-350x250'); ?>
+    <?php get_template_part('sidebars/home-entertainment'); ?>
     <div class="section-title advert">
-<?php if ( is_active_sidebar( 'home_right_hi' ) ) : ?>
-	<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
-		<?php dynamic_sidebar( 'home_right_hi' ); ?>
-	</div><!-- #primary-sidebar -->
-<?php endif; ?>
-    </div>
-    <?php get_template_part('sidebars/top-picks'); ?>
-    <div class="section-title advert">
-<?php if ( is_active_sidebar( 'home_right_lo' ) ) : ?>
-<!-- Kent Lower Rectangle 300x250 -->
-	<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
-		<?php dynamic_sidebar( 'home_right_lo' ); ?>
-	</div><!-- #primary-sidebar -->
-<?php endif; ?>
 	      <?//php get_template_part('advert/home-350x250'); ?>
     </div>
-    <?php get_template_part('sidebars/home-entertainment'); ?>
+    <?php get_template_part('sidebars/top-picks'); ?>
 
   </aside>
   <?php themefusion_pagination($pages = '', $range = 2); ?>

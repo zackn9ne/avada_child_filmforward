@@ -22,8 +22,6 @@
 	<?php if( ($smof_data['footer_widgets'] && get_post_meta($c_pageID, 'pyre_display_footer', true) != 'no') ||
 			  ( ! $smof_data['footer_widgets'] && get_post_meta($c_pageID, 'pyre_display_footer', true) == 'yes') ): ?>
 	<footer class="footer-area">
-		<div class="avada-row">
-			<div class="fusion-columns row fusion-columns-<?php echo $smof_data['footer_widgets_columns']; ?> columns columns-<?php echo $smof_data['footer_widgets_columns']; ?>">
 				<?php 
 				$column_width = 12 / $smof_data['footer_widgets_columns']; 
 				if( $smof_data['footer_widgets_columns'] == '5' ) {
@@ -32,12 +30,11 @@
 				?>
 			
 				<?php if( $smof_data['footer_widgets_columns'] >= 1 ): ?>
-				<div class="fusion-column col <?php echo sprintf( 'col-lg-%s col-md-%s col-sm-%s', $column_width, $column_width, $column_width ); ?> ">
+				<div class="fusion-column">
 				<?php
 				if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer Widget 1')):
 				endif;
 				?>
-				</div>
 				<?php endif; ?>
 				
 				<?php if( $smof_data['footer_widgets_columns'] >= 2 ): ?>

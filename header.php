@@ -146,14 +146,14 @@
     <div class="fusion-header-v1 fusion-logo-left fusion-mobile-logo- fusion-mobile-menu-design-modern">
       <a href="<?php echo home_url(); ?>">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/fflogo.jpg" alt="<?php bloginfo('name'); ?>" class="normal_logo" />
-
               </a>
        <h1 class="branding">Film-Forward</h1>
-      <div class="fusion-header" style="height: 276px; top: 0px; overflow: visible;">
-        <div class="fusion-row" style="padding-top: 0px; padding-bottom: 0px;">
-          <?php get_template_part( 'advert/home-970x90'); ?>
-
-
+</header>
+<?php if ( is_active_sidebar( 'home_top_1' ) ) : ?>
+	<div id="primary-sidebar" class="banner primary-sidebar widget-area" role="complementary">
+		<?php dynamic_sidebar( 'home_top_1' ); ?>
+	</div><!-- #primary-sidebar -->
+<?php endif; ?>
 	  <?php
 	  get_template_part( 'framework/templates/header' );
 	  avada_header_template( 'Below' );
@@ -169,22 +169,4 @@
 	  <?php endif; ?>
 	  <?php if(is_page_template('contact.php') && $smof_data['gmap_address'] && !$smof_data['status_gmap']): ?>
 	  <?php endif; ?>
-	</div>
-<div class="wrapper logowrapper">
-          <div class="col1">
-            
-          </div>
-          <div class="col2">
-
-
-            <div class="gcs">
-	      <?php get_template_part( 'gcs'); ?>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-</header>
-
 

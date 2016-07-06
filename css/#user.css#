@@ -20,7 +20,6 @@ line-height: 1.8;
 .clearfix {
   clear: both; }
 .footer-area {
-    text-align: center;
     border-top: none;
     margin-top: 1em;
 }
@@ -62,7 +61,7 @@ div.featured-post {
 
 .image-container {
   float: left;
-  margin: 0 2em 2em 0; }
+  margin: 0 2em 0 0; }
 
 .rest-of-posts > .section-title {
   padding-left: 0 !important;
@@ -99,7 +98,7 @@ color: white;
 .wrapper {
   height: 100%;
   overflow: hidden;
-  max-width: 990px;
+  max-width: 940px;
   padding: 1em;
   margin: 0 auto;
 }
@@ -129,10 +128,6 @@ a:hover, li.current-menu-item a { color: #1d75cf; }
     margin: 3em 0;
 }
 
-.post {
-display: inline-block;
-}
-
 .post-content img {
     margin: 0;
 }
@@ -154,7 +149,7 @@ display: inline-block;
     margin-bottom: 1.5em;
     padding-bottom: 1.5em;
   }
-  .featured-post h3.byline{
+  .featured-post h3.byline {
       margin: 3em 0 0 0;
   }
   .col1 .section-title {
@@ -163,6 +158,8 @@ display: inline-block;
     display: block;
     width: 100%; }
   .col1 .post p {
+      width: 99%;
+      margin-bottom: 30px;
       text-align: left;
   }
 
@@ -176,14 +173,8 @@ img {
   height: auto;
   max-width: 100%; }
 
-.banner {
-    background-color: #f9f9f9;
-    border-bottom: 1px solid #f0f0f0;
-    padding: 15px 0;
-    text-align: center;
-    width: 100%;
-}
-h3.byline, p.wp-caption-text {
+
+h3.byline {
   font-weight: 200;
   color: #999;
   font-size: 11px;
@@ -215,11 +206,6 @@ h3.byline a {
 nav#nav { 
 font-family: 'Prata', serif; 
 margin: .5em 0 0 0; 
-padding: 1em;
-}
-
-#nav ul li, #sticky-nav ul li {
-padding: 0 0 0 35px;
 }
 
 .pagination a.inactive, .page-links a, .woocommerce-pagination .page-numbers { border: none; }
@@ -258,16 +244,6 @@ padding: 0 0 0 35px;
 
 }
 
-@media screen and (max-width: 991px) {
-.promo-container {
-float: left !important;
-width: 55% !important;
-}
-.image-container {
-margin-bottom: 0;
-}
-
-}
 @media screen and (max-width: 679px) {
   .col1 {
     clear: left;
@@ -310,18 +286,6 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
   margin-left: 7px !important; }
 
 .fusion-tabs-widget .tab-holder .tabs li.active a { border-top: none; }
-
-.promo-container {
-float: right;
-display: inline-block;
-width: 43%;
-}
-
-.film-meta {
-font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
-padding: 0 0 2em 0;
-color: #999;
-}
 
 footer .copyright-area-content ul { display: block !important; font-size: 15px; padding-left: 0; }
 footer ul li { display: inline-block; margin-right: 2em; }
