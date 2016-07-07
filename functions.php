@@ -9,11 +9,11 @@ function avada_child_scripts() {
 add_action('wp_enqueue_scripts', 'avada_child_scripts');
 
 function enque_bitchin_stuff(){
-//array for dependancy management
-  wp_enqueue_script( 'jquery' );
-  wp_enqueue_script( 'underscore' );
-  wp_enqueue_script( 'backbone', array('underscore') );
-  wp_enqueue_script( 'custom',get_stylesheet_directory_uri() . '/js/custom.js', array('backbone') );
+	//array for dependancy management
+	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'underscore' );
+	wp_enqueue_script( 'backbone', array('underscore') );
+	wp_enqueue_script( 'custom',get_stylesheet_directory_uri() . '/js/custom.js', array('backbone') );
 }
 add_action( 'wp_enqueue_scripts', 'enque_bitchin_stuff');
 
@@ -24,24 +24,24 @@ add_action( 'wp_enqueue_scripts', 'enque_bitchin_stuff');
 if ( function_exists('register_sidebar') ) {
 
 	register_sidebar( array(
-		'name'          => 'Home top sidebar',
-		'id'            => 'home_top_1',
-		'before_widget' => '<div>',
-		'after_widget'  => '</div>',
-	) );
+				'name'          => 'Home top sidebar',
+				'id'            => 'home_top_1',
+				'before_widget' => '<div>',
+				'after_widget'  => '</div>',
+			       ) );
 
 	register_sidebar( array(
-		'name'          => 'Home right sidebar Lo',
-		'id'            => 'home_right_lo',
-		'before_widget' => '<div>',
-		'after_widget'  => '</div>',
-	) );
+				'name'          => 'Home right sidebar Lo',
+				'id'            => 'home_right_lo',
+				'before_widget' => '<div>',
+				'after_widget'  => '</div>',
+			       ) );
 	register_sidebar( array(
-		'name'          => 'Home right sidebar Hi',
-		'id'            => 'home_right_hi',
-		'before_widget' => '<div>',
-		'after_widget'  => '</div>',
-	) );
+				'name'          => 'Home right sidebar Hi',
+				'id'            => 'home_right_hi',
+				'before_widget' => '<div>',
+				'after_widget'  => '</div>',
+			       ) );
 }
 
 /**

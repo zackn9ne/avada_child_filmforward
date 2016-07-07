@@ -7,10 +7,40 @@ font-family: 'Prata', serif;
 color: rgb(63, 69, 73); 
 margin: 10px 0;
 }
-h1.branding { 
-font-size: 52px;
-font-weight: 500;
-text-transform: none;text-align: left;display: inline-block;top: 1em;position: relative;}
+/*-- logo block ---*/
+h1.branding {
+    font-size: 40px;
+    font-weight: 500;
+    text-transform: none;
+    text-align: left;
+    display: inline-block;
+    /* padding-top: 1em; */
+    position: relative;
+    line-height: 2.5;
+    margin: 0 0 0 .2em;
+    float: left;
+}
+.fusion-header-v1 {
+    text-align: center;
+    width: 470px;
+    margin: 1em auto;
+}
+div.fusion-logo-left a {
+    display: inline-block;
+    text-align: left;
+    /* margin-top: -1em; */
+    /* line-height: 9em; */
+    float: left;
+    width: 100px;
+}
+@media screen and (min-width: 500px) {
+	h1.branding {
+	    font-size: 52px;
+	    line-height: 2em;
+	    margin: 0 0 0 .4em;
+	}
+}
+
 
 p { 
 font-family: Merriweather, 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -41,13 +71,10 @@ header {
     margin-top: 31px; }
 
 header.fusion-header-wrapper div.wrapper { padding-bottom: 0 }
-.fusion-header-v1 { text-align: center; }
 
 .wrapper { padding-top: 0 !important; padding-bottom: 0 !important; }
 
 .normal_logo { margin: 0 0 1em 0; max-height: 100px;  }
-div.fusion-logo-left a {display: inline-block;text-align: left;}
-
 
 .gcs { margin: 2.3em 0 0 0; }
 .cse .gsc-control-cse, .gsc-control-cse { padding: 0; }
@@ -256,6 +283,10 @@ padding: 0 0 0 35px;
 /*this theme*/
 /*max width*/
 @media screen and (max-width: 990px) {
+  .col1 {
+    max-width: 100%;
+    float: left;
+}
   .col2 {
     float: left;
     margin: 0;
