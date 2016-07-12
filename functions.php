@@ -49,3 +49,8 @@ if ( function_exists('register_sidebar') ) {
  *
  */
 
+/** do stuff with thumbnail **/
+
+add_image_size( 'full-width-ratio', 600, 9999 );
+add_image_size( 'full-width-crop', 600, 300, true );
+

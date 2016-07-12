@@ -93,7 +93,7 @@
 			<div class="copyright-area-content">
 					<ul>
 						<li><a href="/category/home_entertainment">Home Entertainment</a></li>
-						<li><a href="/category/festivals">Festivals</a></li>
+						<li><a href="/category/film-festivals">Festivals</a></li>
 						<li><a href="/category/star-reviews">Top Picks</a></li>
 						<li><a href="/about">About</a></li>
 						<li><a href="/contact">Contact</a></li>

@@ -70,11 +70,7 @@
     </div>
 <aside id="sidebar" class="col2">
     <div class="section-title advert">
-<?php if ( is_active_sidebar( 'home_right_hi' ) ) : ?>
-	<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
-		<?php dynamic_sidebar( 'home_right_hi' ); ?>
-	</div><!-- #primary-sidebar -->
-<?php endif; ?>
+
     </div>
     <?php get_template_part('sidebars/top-picks'); ?>
     <div class="section-title advert">
