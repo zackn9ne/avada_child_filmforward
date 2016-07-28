@@ -24,21 +24,21 @@ add_action( 'wp_enqueue_scripts', 'enque_bitchin_stuff');
 if ( function_exists('register_sidebar') ) {
 
 	register_sidebar( array(
-				'name'          => 'Home top sidebar',
+				'name'          => 'Film-Forward Top Center',
 				'id'            => 'home_top_1',
 				'before_widget' => '<div>',
 				'after_widget'  => '</div>',
 			       ) );
 
 	register_sidebar( array(
-				'name'          => 'Home right sidebar Lo',
-				'id'            => 'home_right_lo',
+				'name'          => 'Film-Forward Sidebar Hi',
+				'id'            => 'home_right_hi',
 				'before_widget' => '<div>',
 				'after_widget'  => '</div>',
 			       ) );
 	register_sidebar( array(
-				'name'          => 'Home right sidebar Hi',
-				'id'            => 'home_right_hi',
+				'name'          => 'Film-Forward Sidebar Lo',
+				'id'            => 'home_right_lo',
 				'before_widget' => '<div>',
 				'after_widget'  => '</div>',
 			       ) );

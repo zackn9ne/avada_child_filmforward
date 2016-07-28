@@ -151,18 +151,18 @@ comments_template();
 <?php wp_reset_query(); ?>
 </div>
 <aside id="sidebar" class="col2">
-  <div class="section-title advert">
-</div><!-- #primary-sidebar -->
-
-
-<?php get_template_part('sidebars/top-picks'); ?>
-<div class="section-title advert">
+	      <?php include ('social-div.php'); ?>
   <?php if ( is_active_sidebar( 'home_right_lo' ) ) : ?>
    <!-- Kent Lower Rectangle 300x250 -->
       <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
       <?php dynamic_sidebar( 'home_right_lo' ); ?>
 </div><!-- #primary-sidebar -->
 <?php endif; ?>
+
+
+
+<?php get_template_part('sidebars/top-picks'); ?>
+<div class="section-title advert">
 <?//php get_template_part('advert/home-350x250'); ?>
 </div>
 <?php get_template_part('sidebars/home-entertainment'); ?>

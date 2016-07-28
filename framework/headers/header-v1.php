@@ -12,11 +12,6 @@
 <?php get_template_part('framework/headers/header-main-menu'); ?>
 
 
-<?php if ( is_active_sidebar( 'home_right_hi' ) ) : ?>
-    <?php dynamic_sidebar( 'home_right_hi' ); ?>
-<?php endif; ?>
-
-
 </nav>
 <?php if($smof_data['mobile_menu_design'] == 'modern' && ! $smof_data['ubermenu']): ?>
     <div class="mobile-menu-icons">

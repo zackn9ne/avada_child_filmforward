@@ -86,13 +86,20 @@
 
 
   <aside id="sidebar" class="col2">
-    <?php dynamic_sidebar( 'Blog Sidebar' ); ?> 
-    <?//php get_template_part('advert/home-350x250'); ?>
-    <?php get_template_part('sidebars/home-entertainment'); ?>
+	      <?php include ('social-div.php'); ?>
+
+<?php if ( is_active_sidebar( 'home_right_hi' ) ) : ?>
+	<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+		<?php dynamic_sidebar( 'home_right_hi' ); ?>
+	</div>
+<?php endif; ?>
+
+    <?php get_template_part('sidebars/top-picks'); ?>
     <div class="section-title advert">
+
 	      <?//php get_template_part('advert/home-350x250'); ?>
     </div>
-    <?php get_template_part('sidebars/top-picks'); ?>
+    <?php get_template_part('sidebars/home-entertainment'); ?>
 
   </aside>
   <?php themefusion_pagination($pages = '', $range = 2); ?>

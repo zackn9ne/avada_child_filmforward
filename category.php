@@ -68,22 +68,9 @@
 
 
     </div>
-<aside id="sidebar" class="col2">
-    <div class="section-title advert">
 
-    </div>
-    <?php get_template_part('sidebars/top-picks'); ?>
-    <div class="section-title advert">
-<?php if ( is_active_sidebar( 'home_right_lo' ) ) : ?>
-<!-- Kent Lower Rectangle 300x250 -->
-	<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
-		<?php dynamic_sidebar( 'home_right_lo' ); ?>
-	</div><!-- #primary-sidebar -->
-<?php endif; ?>
-	      <?//php get_template_part('advert/home-350x250'); ?>
-    </div>
-    <?php get_template_part('sidebars/home-entertainment'); ?>
-
+  <aside id="sidebar" class="col2">
+	      <?php include ('sidebar.php'); ?>
   </aside>
 
     

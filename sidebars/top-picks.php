@@ -1,5 +1,5 @@
 <div class="section-title">
-   <a href="/category/top-picks"><span>Top Picks</span></a>
+   <a href="/category/star-reviews"><span>Top Picks</span></a>
    </div>
 
    <?php  wp_reset_query(); ?>
