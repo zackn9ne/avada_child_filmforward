@@ -186,7 +186,7 @@ a:hover, li.current-menu-item a { color: #1d75cf; }
 
 .col1 {
     text-align: left; }
-.col1 .post, .col1 .featured-post {
+.col1 .featured-post {
     border-bottom: 1px solid #e2e2e2;
 }
 .featured-post {
@@ -351,11 +351,57 @@ nav#nav {
 .main-nav-search-form {
     display: inline-block !important; }
 
+.wrapper {
+ animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 /*this theme*/
 input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus {
     border-color: inherit;
     background-color: inherit;
-    background-image: inherit; }
+    background-image: inherit; 
+    border: 1px solid black;
+    height: 100%;
+    color: black;
+    font-family: 'Prata', serif;
+    text-transform: uppercase;
+    cursor: pointer;
+}
 
 .cse .gsc-search-button input.gsc-search-button-v2, input.gsc-search-button-v2 {
     width: initial !important;
@@ -370,7 +416,7 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
 .fusion-tabs-widget .tab-holder .tabs li.active a { border-top: none; }
 
 .promo-container {
-    float: right;
+    float: left;
     display: inline-block;
     width: 43%;
 }
@@ -445,7 +491,7 @@ input.gsc-input {
 }
 
 /* Icons */
-.gsc-clear-button { display: none; }
+.gsc-clear-button { display: inline; }
 
 /* Socials */
 .social-div
