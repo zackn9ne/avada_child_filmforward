@@ -118,6 +118,7 @@ div.featured-post {
 
 .section-title.advert {
     background: none;
+    clear: both;
     color: #646464;
     margin-bottom: 0em;
     padding-left: 0;
